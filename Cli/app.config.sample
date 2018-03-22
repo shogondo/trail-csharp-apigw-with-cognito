@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <appSettings>
+    <add key="region" value=""/>
     <add key="userPoolId" value=""/>
     <add key="clientId" value=""/>
     <add key="identityPoolId" value=""/>
     <add key="username" value=""/>
     <add key="password" value=""/>
+    <add key="apiId" value=""/>
+    <add key="stage" value=""/>
+    <add key="method" value=""/>
+    <add key="path" value=""/>
+    <add key="querystring" value=""/>
   </appSettings>
 </configuration>

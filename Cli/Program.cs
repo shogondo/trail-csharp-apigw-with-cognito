@@ -48,7 +48,8 @@ namespace Cli
                 var idToken = response.AuthenticationResult.IdToken;
 
                 var credentials = new CognitoAWSCredentials(identityPoolId, RegionEndpoint.GetBySystemName(region));
-                credentials.AddLogin("cognito-idp.ap-northeast-1.amazonaws.com/" + userPoolId, idToken);
+                var provider = String.Format("cognito-idp.{0}.amazonaws.com/{1}", region, userPoolId);
+                credentials.AddLogin(provider, idToken);
 
                 var immutableCredentials = await credentials.GetCredentialsAsync();
 
